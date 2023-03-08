@@ -7,7 +7,7 @@ export function getInstance<T>(interfaceName: string):T {
     }
     
     let impl: Object | undefined = undefined;
-    switch(import.meta.env.MODE) {
+    switch(import.meta.env.VITE_MODE) {
         case "DEV":
             impl = service.dev;
         case "PROD":
