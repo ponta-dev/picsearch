@@ -1,4 +1,4 @@
-import { ServiceList } from './serviceList'
+import { ServiceList } from '@/plugin/di/serviceList'
 
 export function getInstance<T>(interfaceName: string):T {
     const service = ServiceList.find(service => service.id == interfaceName);
