@@ -21,6 +21,18 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## メンテナンス確認
+
+* ライブラリのアップデート確認
+```sh
+npm outdated
+```
+
+* ライブラリのアップデート
+```sh
+npm install -save ライブラリ名@latest
+```
+
 ## Project Setup
 
 ```sh
