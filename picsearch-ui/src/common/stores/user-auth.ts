@@ -1,7 +1,7 @@
 import type { UserInfo } from '@/common/interface/userInfo'
 import { defineStore } from 'pinia'
 
-export const useUserAuth = defineStore('userAuth', {
+export const useUserAuthStore = defineStore('userAuth', {
     state: () => ({
         userId: "",
         userName: "",

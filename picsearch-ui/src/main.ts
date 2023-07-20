@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { router, setBeforeRouter} from './plugin/router'
 
 //logger
 import './plugin/log/logger'
@@ -14,7 +15,6 @@ import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
 import App from './App.vue'
-import router from './plugin/router'
 
 const app = createApp(App)
 const vuetify = createVuetify({
@@ -33,8 +33,14 @@ const vuetify = createVuetify({
 log.info("application started")
 log.debug("**** ENV SETTING ****", import.meta.env)
 
-app.use(createPinia())
+// storeの設定
+const pinia = createPinia()
+app.use(pinia)
+
+// ルーターの設定
 app.use(router)
+setBeforeRouter()
+
 app.use(vuetify)
 
 app.mount('#app')
