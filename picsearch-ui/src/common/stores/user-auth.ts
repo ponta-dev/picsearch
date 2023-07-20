@@ -15,7 +15,7 @@ export const useUserAuth = defineStore('userAuth', {
         },
 
         isAuthrized: (store) => {
-            return store.authToken != ""
+            return !(store.authToken == "" || store.authToken == undefined)
         }
     },
 

@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginLayout from '@/common/component/LoginLayout.vue'
+import LoginLayout from '@/common/component/login/LoginLayout.vue'
+import HomeLayout from '@/common/component/home/HomeLayout.vue'
+import PictureSearchLayout from '@/picsearch/component/PictureSearchLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,13 +21,29 @@ const router = createRouter({
     }*/
     {
       path: '/',
-      name: 'home',
+      name: 'root',
       redirect: 'login'
     }
     ,{
       path: '/login',
       name: 'login',
       component: LoginLayout
+    }
+    ,{
+      path: '/home',
+      name: 'home',
+      component: HomeLayout,
+      children: [
+        {
+          path: "",
+          redirect: "home/picsearch"
+        }
+        ,{
+          path: "picsearch",
+          name: "picsearch",
+          component: PictureSearchLayout
+        }
+      ]
     }
   ]
 })
