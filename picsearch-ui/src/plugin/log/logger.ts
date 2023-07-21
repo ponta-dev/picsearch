@@ -1,5 +1,5 @@
 import log from 'loglevel'
-import stringutil from '@/common/util/string-util'
+import stringutil from '@/main/common/util/string-util'
 
 function getLogLevel(level: string):log.LogLevelDesc {
     switch(level) {

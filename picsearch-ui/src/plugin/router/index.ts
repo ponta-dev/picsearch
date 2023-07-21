@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useUserAuthStore } from '@/common/stores/user-auth'
+import { useUserAuthStore } from '@/main/common/stores/user-auth'
 import log from 'loglevel'
 
-import LoginLayout from '@/common/component/login/LoginLayout.vue'
-import HomeLayout from '@/common/component/home/HomeLayout.vue'
-import PictureSearchLayout from '@/picsearch/component/PictureSearchLayout.vue'
+import LoginLayout from '@/main/common/component/login/LoginLayout.vue'
+import HomeLayout from '@/main/common/component/home/HomeLayout.vue'
+import PictureSearchLayout from '@/main/picsearch/component/PictureSearchLayout.vue'
 
 
 export const router = createRouter({

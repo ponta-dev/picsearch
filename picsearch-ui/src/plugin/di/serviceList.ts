@@ -1,4 +1,4 @@
-import { UserServiceMockImpl } from "@/common/service/userServiceMockImpl";
+import { UserServiceMockImpl } from "@/main/common/service/userServiceMockImpl";
 
 interface ServiceListIF {
     id: string,

@@ -1,4 +1,4 @@
-import type { UserInfo } from '@/common/interface/userInfo'
+import type { UserInfo } from '../interface/userInfo'
 import { defineStore } from 'pinia'
 
 export const useUserAuthStore = defineStore('userAuth', {
