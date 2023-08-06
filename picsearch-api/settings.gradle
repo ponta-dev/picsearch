@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'picsearch-api'
-rootProject.buildFileEncoding='UTF-8'
+//rootProject.buildFileEncoding='UTF-8'
